@@ -1,7 +1,14 @@
-function Footer() {
+import type React from "react";
+
+type FooterProps = {
+    datetime: string;
+    title: string;
+}
+
+const Footer: React.FC<FooterProps> = (props: FooterProps) => {
     return (
         <footer>
-            <p>Movies App Footer</p>
+            <p>{props.title} - {props.datetime}</p>
         </footer>
     );
 }
