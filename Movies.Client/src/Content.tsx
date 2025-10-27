@@ -1,20 +1,20 @@
 import type React from "react";
+import type { Movie } from "./types";
+import CardMovie from "./CardMovie";
 
 type ContentProps = {
-    movieCatalog: any[];
+    movies: Movie[];
 }
 
 const Content: React.FC<ContentProps> = (props: ContentProps) => {
     
-
     return (
         <div>
             {
-                props.movieCatalog.length > 0 && props.movieCatalog.map((movie, index) => 
+                props.movies.length > 0 && props.movies.map((movie, index) => 
                 (
                     <div key={index}>
-                        <h2>{movie.title}</h2>
-                        <p>{movie.text}</p>
+                        <CardMovie movie={movie} />
                     </div>
                 )) 
             }
