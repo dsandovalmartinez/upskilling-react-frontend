@@ -7,8 +7,14 @@ type FooterProps = {
 
 const Footer: React.FC<FooterProps> = (props: FooterProps) => {
     return (
-        <footer>
-            <p>{props.title} - {props.datetime}</p>
+        <footer
+        >
+            <small>
+            {props.title} —{" "}
+            <time dateTime={props.datetime}>
+                {new Date(props.datetime).toLocaleString()}
+            </time>
+            </small>
         </footer>
     );
 }

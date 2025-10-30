@@ -3,4 +3,5 @@ export interface Movie {
     releaseDate: Date;
     pictureUrl: string;
     description: string;
+    genre: string;
 }
